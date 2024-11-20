@@ -2,6 +2,7 @@ import { init, fetchQuery } from "@airstack/node";
 import { NextRequest, NextResponse } from "next/server";
 import { gql, GraphQLClient } from "graphql-request";
 import fs from "fs/promises"; // For reading JSON files
+import path from 'path';
 
 const apiKey = process.env.AIRSTACK_API_KEY;
 if (!apiKey) {
@@ -96,6 +97,7 @@ export async function GET(req: NextRequest) {
       { status: 400 }
     );
   }
+  const filePath = path.join(process.cwd(), 'data', 'moxie_resolve.json');
 
   try {
     const variable = { symbol: `fid:${userId}` };
@@ -117,7 +119,7 @@ export async function GET(req: NextRequest) {
 
     // Read data from moxie_resolve.json
     const moxieResolveData: MoxieResolve[] = JSON.parse(
-      await fs.readFile("moxie_resolve.json", "utf-8")
+      await fs.readFile(filePath, "utf-8")
     );
 
     if (!moxieResolveData || moxieResolveData.length === 0) {
