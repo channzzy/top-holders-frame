@@ -244,13 +244,13 @@ const frameHandler = frames(async (ctx) => {
   const fidEncoded = fid ? encodeURIComponent(fid) : "";
 
   const shareUrl = `https://warpcast.com/~/compose?text=${shareText}&embeds[]=${encodeURIComponent(
-    "http://localhost:3000/" +
+    "https://top-holders-frame.vercel.app/" +
       (fid
         ? `?userfid=${fidEncoded}&cache_bust=${cacheBust}`
         : `?cache_bust=${cacheBust}`)
   )}`;
 
-  const checkStatusUrl = `http://localhost:3000/frames?userfid=${fidEncoded}&cache_bust=${cacheBust}`;
+  const checkStatusUrl = `https://top-holders-frame.vercel.app/frames?userfid=${fidEncoded}&cache_bust=${cacheBust}`;
 
   const buttons = [];
 
