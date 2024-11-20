@@ -18,11 +18,11 @@ export async function generateMetadata({
   const castActionUrl = new URL("/api/cast-action", appURL());
 
   return {
-    title: "Moxie Power Frame By Chanzy10",
-    description: "use this for check your moxie power.",
+    title: "Top Holders of My Fan Token By @chanzy10",
+    description: "use this for check top holder of your fan token",
     openGraph: {
-      title: "Moxie Power Frame By Chanzy10",
-      description: "use this for check your moxie power.",
+      title: "Top Holders of My Fan Token By @chanzy10",
+      description: "use this for check top holder of your fan token",
       images: [`${framesUrl.origin}/api/og`],
     },
     other: {
@@ -33,5 +33,5 @@ export async function generateMetadata({
 }
 
 export default function Page() {
-  return <span>Moxie Power Frame By <a href="https://warpcast.com/chanzy10" style={{color: "blue"}}>Chanzy10</a></span>;
+  return <span>Top Holders of My Fan Token Frame By <a href="https://warpcast.com/chanzy10" style={{color: "blue"}}>Chanzy10</a></span>;
 }

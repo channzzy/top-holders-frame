@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Moxie Power Frame By Chanzy10",
-  description: "use this for check your moxie power.",
+  title: "Top Holders of My Fan Token Frame By Chanzy10",
+  description: "use this for check top holder of your fan token",
 };
 
 export default function RootLayout({

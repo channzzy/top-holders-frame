@@ -234,7 +234,7 @@ const frameHandler = frames(async (ctx) => {
       return `${index + 1}. ${holder.shareList}`;
     });
     const list = shareListArray.join("\n");
-    shareText = encodeURIComponent(`Top Holders of My Fan Tokens:\n${list}\nFrame by @chanzy10`);
+    shareText = encodeURIComponent(`Top Holders of My Fan Token:\n${list}\nFrame by @chanzy10`);
   } else {
     shareText = encodeURIComponent("Check Top Holders Your Fan Token in Frame by @chanzy10");
   }
