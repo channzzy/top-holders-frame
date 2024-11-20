@@ -117,7 +117,7 @@ export async function GET(req: NextRequest) {
 
     // Read data from moxie_resolve.json
     const moxieResolveData: MoxieResolve[] = JSON.parse(
-      await fs.readFile("data/moxie_resolve.json", "utf-8")
+      await fs.readFile("moxie_resolve.json", "utf-8")
     );
 
     if (!moxieResolveData || moxieResolveData.length === 0) {
